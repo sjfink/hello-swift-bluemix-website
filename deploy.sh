@@ -40,7 +40,19 @@ function installOS() {
    $CF create-service Object-Storage Free $OS_INSTANCE
 }
 
-function install() {
+function upload() {
+   env
+
+   `$SWIFT auth`
+   $SWIFT upload $CONTAINER index.html
+
+   # make it publicly readable
+   $SWIFT post -r '.r:*' $CONTAINER
+
+   echo $OS_STORAGE_URL/$CONTAINER/index.html
+}
+
+function env() {
    
    # set environment variables for the object store instance
    $CF create-service-key $OS_INSTANCE for-demo
@@ -62,6 +74,12 @@ function install() {
    echo OS_AUTH_VERSION=$OS_AUTH_VERSION
 
    $SWIFT --version
+}
+
+
+function install() {
+   
+   env
 
    # create a container
    $SWIFT post $CONTAINER
@@ -69,18 +87,15 @@ function install() {
    # set index.html as the default file
    $SWIFT post -m 'web-index:index.html' $CONTAINER
 
-   `$SWIFT auth`
-
-   $SWIFT upload $CONTAINER index.html
-
-   # make it publicly readable
-   $SWIFT post -r '.r:*' $CONTAINER
-
-   echo $OS_STORAGE_URL/$CONTAINER/index.html
+   upload
 }
 
 function uninstall() {
    echo Uninstall not yet implemented
+}
+
+function usage() {
+   echo usage: deploy.sh [--installOS] [--install] [--uninstall] [--upload]
 }
 
 
@@ -93,6 +108,9 @@ install
 ;;
 "--uninstall" )
 uninstall
+;;
+"--upload" ) 
+upload
 ;;
 * )
 usage
