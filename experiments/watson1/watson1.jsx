@@ -1,6 +1,4 @@
-var WRC = require('watson-react-components');
-var Jumbotron= WRC.Jumbotron;
-var Footer = WRC.Footer;
+var {Jumbotron, Footer} = require('watson-react-components');
 
 ReactDOM.render(
         <Jumbotron
