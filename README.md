@@ -6,4 +6,4 @@ This is based on https://developer.ibm.com/recipes/tutorials/create-a-static-web
 
 ## Getting Started
 
-This has been tested on MacOS X.  See deploy.sh for details.
+This has been tested on MacOS X.  See [deploy.sh](https://github.com/sjfink/hello-swift-bluemix-website/blob/master/deploy.sh) for details.
