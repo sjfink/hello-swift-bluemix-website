@@ -3,6 +3,6 @@ const {
 } = Reactstrap;
 
 ReactDOM.render(
-  React.createElement(Button, {color: "primary"}, "primary" ),
+  <Button color="primary"> primary </Button>,
   document.getElementById('app')
 );

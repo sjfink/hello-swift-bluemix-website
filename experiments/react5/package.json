@@ -1,0 +1,21 @@
+{
+    "name": "react5",
+        "version": "1.0.0",
+        "description": "",
+        "main": "",
+        "dependencies": {
+            "react-dom" : "latest",
+            "react-addons-transition-group" : "latest",
+            "react-addons-css-transition-group" : "latest",
+            "react" : "latest",
+            "reactify" : "latest",
+            "react-dom" : "latest",
+            "reactstrap": "latest"
+        },
+        "devDependencies": {},
+        "scripts": {
+            "test": "echo \"Error: no test specified\" && exit 1"
+        },
+        "author": "",
+        "license": "ISC"
+}
