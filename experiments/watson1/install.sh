@@ -1,4 +1,4 @@
 #!/bin/bash
 
 npm install
-browserify -t reactify watson1.jsx > app.js
+browserify -t [ babelify --presets [ es2015 react ] ] watson1.jsx > app.js

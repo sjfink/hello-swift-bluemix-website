@@ -1,21 +1,25 @@
 {
-    "name": "react5",
-        "version": "1.0.0",
-        "description": "",
-        "main": "",
-        "dependencies": {
-            "react-dom" : "latest",
-            "react-addons-transition-group" : "latest",
-            "react-addons-css-transition-group" : "latest",
-            "react" : "latest",
-            "reactify" : "latest",
-            "react-dom" : "latest",
-            "watson-react-components": "latest"
-        },
-        "devDependencies": {},
-        "scripts": {
-            "test": "echo \"Error: no test specified\" && exit 1"
-        },
-        "author": "",
-        "license": "ISC"
+  "name": "react5",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "dependencies": {
+    "react-dom": "latest",
+    "react-addons-transition-group": "latest",
+    "react-addons-css-transition-group": "latest",
+    "react": "latest",
+    "babelify": "latest",
+    "babel-preset-es2015": "latest",
+    "babel-preset-react": "latest",
+    "babel-preset-stage-2": "latest",
+    "watson-react-components": "latest"
+  },
+  "devDependencies": {
+    "babelify": "^7.3.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
 }
