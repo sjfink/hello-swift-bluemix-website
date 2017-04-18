@@ -1,7 +1,23 @@
 var WRC = require('watson-react-components');
-var Icon = WRC.Icon;
+var Jumbotron= WRC.Jumbotron;
+var Footer = WRC.Footer;
 
 ReactDOM.render(
-  <Icon type="plus" />,
-  document.getElementById('app')
-);
+        <Jumbotron
+        serviceName="Demo title"
+        repository="https://github.com/watson-developer-cloud/react-components"
+        documentation="https://www.ibm.com/watson/developercloud/doc/visual-recognition/"
+        apiReference="https://www.ibm.com/watson/developercloud/visual-recognition/api/v3"
+        startInBluemix="https://console.ng.bluemix.net/registration/?target=/catalog/services/visual-recognition/"
+        version="Beta"
+        serviceIcon="images/service-icon.svg"
+        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        />,
+        document.getElementById('app')
+        );
+
+
+ReactDOM.render(
+        <Footer />,
+        document.getElementById('footer')
+        );
