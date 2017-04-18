@@ -1,4 +1,4 @@
-var {Jumbotron, Footer} = require('watson-react-components');
+import { Jumbotron, Footer } from 'watson-react-components';
 
 ReactDOM.render(
         <Jumbotron
